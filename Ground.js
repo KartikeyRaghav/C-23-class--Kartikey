@@ -1,0 +1,21 @@
+class Ground {
+
+    constructor(x,y,width,height) {
+        var ob = {
+            isStatic:true
+        }
+
+        this.body = Bodies.rectangle(200,200,30,30,ob);
+        this.width = width;
+        this.height = height;
+
+        World.add(world,this.body);
+    }
+
+    display() {
+        var pos = this.body.position;
+        fill(200);
+        rect(pos.x,pos.y,this.width,this.height);
+    }
+
+} 
